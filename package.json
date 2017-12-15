@@ -6,19 +6,14 @@
   "license": "MIT",
   "scripts": {
     "lint": "eslint src test tools",
-    "build": "node tasks/build",
+    "build": "flow && node tasks/build",
     "prepublish": "npm run build"
   },
   "babel": {
     "presets": [
-      [
-        "env",
-        {
-          "loose": true,
-          "modules": false
-        }
-      ],
-      "stage-0"
+        "flow",
+        "stage-0",
+        ["env", { "modules": false }]
     ],
     "plugins": [
       "transform-runtime",
@@ -31,7 +26,7 @@
     "babel-plugin-add-module-exports": "^0.2.1",
     "babel-plugin-transform-runtime": "^6.23.0",
     "babel-preset-env": "^1.6.1",
-    "babel-preset-flow": "^6.23.0",
+    "b": "^6.23.0",
     "babel-preset-stage-0": "^6.24.1",
     "babel-register": "^6.26.0",
     "del": "^3.0.0",
@@ -41,6 +36,7 @@
     "eslint-config-prettier": "^2.9.0",
     "eslint-plugin-import": "^2.8.0",
     "eslint-plugin-prettier": "^2.3.1",
+    "flow-bin": "^0.61.0",
     "prettier": "^1.9.2",
     "prettier-eslint": "^8.3.1",
     "rollup": "^0.52.1",
