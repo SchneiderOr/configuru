@@ -1,0 +1,14 @@
+{
+	"123": {
+		"signup": false,
+		"login": true,
+		"contant": false
+	},
+	"666": {
+		"some": false,
+		"feature": true,
+		"realeases": {
+			"is": true
+		}
+	}
+}

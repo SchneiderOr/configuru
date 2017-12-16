@@ -6,6 +6,7 @@
   "license": "MIT",
   "scripts": {
     "lint": "eslint src test tools",
+    "mock-server": "json-server --watch mockDB.json",
     "build": "flow && node tasks/build",
     "prepublish": "npm run build"
   },
@@ -42,6 +43,7 @@
     "eslint-plugin-import": "^2.8.0",
     "eslint-plugin-prettier": "^2.3.1",
     "flow-bin": "^0.61.0",
+    "json-server": "^0.12.1",
     "prettier": "^1.9.2",
     "prettier-eslint": "^8.3.1",
     "rollup": "^0.52.1",
@@ -50,6 +52,7 @@
   "dependencies": {
     "babel-runtime": "^6.26.0",
     "isomorphic-fetch": "^2.2.1",
+    "node-cache": "^4.1.1",
     "ramda": "^0.25.0"
   }
 }
