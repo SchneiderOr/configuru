@@ -6,6 +6,7 @@
   "license": "MIT",
   "scripts": {
     "lint": "eslint src test tools",
+    "flow": "flow check",
     "mock-server": "json-server --watch mockDB.json",
     "build": "flow && node tasks/build",
     "prepublish": "npm run build"
