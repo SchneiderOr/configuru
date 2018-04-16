@@ -5,7 +5,7 @@
 	"author": "Or Schneider",
 	"license": "MIT",
 	"scripts": {
-		"build": "webpack --env dev && webpack --env build",
+		"build": "del dist && webpack --env dev && webpack --env build",
 		"dev": "webpack --progress --colors --watch --env dev",
 		"fix": "eslint --fix lib/",
 		"flow": "flow check",
@@ -31,6 +31,7 @@
 		"babel-preset-stage-0": "^6.24.1",
 		"babel-register": "^6.26.0",
 		"chai": "^4.1.2",
+		"del": "^3.0.0",
 		"eslint": "^4.13.1",
 		"eslint-config-airbnb": "^16.1.0",
 		"eslint-config-airbnb-base": "^12.1.0",
