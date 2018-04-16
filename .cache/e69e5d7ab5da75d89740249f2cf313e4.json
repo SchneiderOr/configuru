@@ -1,1 +1,0 @@
-{"dependencies":[{"name":"core-js/library/fn/object/is-extensible","loc":{"line":1,"column":38}}],"generated":{"js":"module.exports = { \"default\": require(\"core-js/library/fn/object/is-extensible\"), __esModule: true };"},"hash":"bd14a393ec442d630c56b2afdad22177"}

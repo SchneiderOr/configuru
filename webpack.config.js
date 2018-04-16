@@ -12,22 +12,22 @@ let plugins = [];
 
 if (env === 'build') {
 	plugins.push(new UglifyJsPlugin({ minimize: true }));
-	outputFile = libraryName + '.min.js';
+	outputFile = libraryName + '.min';
 } else {
-	outputFile = libraryName + '.js';
+	outputFile = libraryName;
 }
 
 function createMultipleConfigs({ target }) {
 	return {
-		target: "node",
+		target,
 		entry: __dirname + '/lib/index.js',
 		devtool: 'source-map',
 		output: {
 			path: __dirname + '/dist',
 			filename: outputFile + '-' + target + '.js',
 			library: "Configuru",
-			libraryTarget: target,
-			umdNamedDefine: target === "umd"
+			libraryTarget: target === "web" ? 'var' : 'umd',
+			umdNamedDefine: target === "node"
 		},
 		module: {
 			rules: [
@@ -53,5 +53,5 @@ function createMultipleConfigs({ target }) {
 
 // To export the library to both browser and node
 module.exports = createVariants({
-	target: ['var', 'commonjs2', 'umd']
+	target: ['web', 'node'],
 }, createMultipleConfigs);

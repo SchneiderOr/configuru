@@ -1,1 +1,0 @@
-{"dependencies":[{"name":"core-js/library/fn/object/define-properties","loc":{"line":1,"column":38}}],"generated":{"js":"module.exports = { \"default\": require(\"core-js/library/fn/object/define-properties\"), __esModule: true };"},"hash":"4b3c571a513d0fc33b2c2b271db36674"}

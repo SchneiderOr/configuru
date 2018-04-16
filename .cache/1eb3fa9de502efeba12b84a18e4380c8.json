@@ -1,1 +1,0 @@
-{"dependencies":[{"name":"core-js/library/fn/number/is-integer","loc":{"line":1,"column":38}}],"generated":{"js":"module.exports = { \"default\": require(\"core-js/library/fn/number/is-integer\"), __esModule: true };"},"hash":"c4871149a4a97a0fa6a26f54ac5d3e9c"}

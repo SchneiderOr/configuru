@@ -1,1 +1,0 @@
-{"dependencies":[{"name":"../../modules/es6.number.is-integer","loc":{"line":1,"column":8}},{"name":"../../modules/_core","loc":{"line":2,"column":25}}],"generated":{"js":"require('../../modules/es6.number.is-integer');\nmodule.exports = require('../../modules/_core').Number.isInteger;\n"},"hash":"80cd1edab8b2efad050ad43f19946bbc"}

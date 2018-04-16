@@ -1,1 +1,0 @@
-{"dependencies":[{"name":"core-js/library/fn/object/prevent-extensions","loc":{"line":1,"column":38}}],"generated":{"js":"module.exports = { \"default\": require(\"core-js/library/fn/object/prevent-extensions\"), __esModule: true };"},"hash":"85adeb7dddd55ee3bf58c7b33ab02fa1"}
