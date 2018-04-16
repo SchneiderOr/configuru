@@ -1,0 +1,1 @@
+{"dependencies":[],"generated":{"js":"\"use strict\";\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\nexports.default = {\n  init: function init() {\n    return this.xf['@@transducer/init']();\n  },\n  result: function result(_result) {\n    return this.xf['@@transducer/result'](_result);\n  }\n};"},"hash":"91a6bc6fcd98e2bd8a90f1456d321df9"}

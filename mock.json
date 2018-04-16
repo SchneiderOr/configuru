@@ -1,0 +1,15 @@
+{
+	"orKey1234": {
+		"key1": true,
+		"key2": false,
+		"key3": true,
+		"key4": {
+			"nested": false
+		}
+	},
+	"123": {
+		"key1": true,
+		"key2": false,
+		"key3": false
+	}
+}

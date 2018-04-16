@@ -1,0 +1,1 @@
+{"dependencies":[{"name":"../../modules/es6.object.is-extensible","loc":{"line":1,"column":8}},{"name":"../../modules/_core","loc":{"line":2,"column":25}}],"generated":{"js":"require('../../modules/es6.object.is-extensible');\nmodule.exports = require('../../modules/_core').Object.isExtensible;\n"},"hash":"b9e4fc45bf8077548daee157d612e850"}
