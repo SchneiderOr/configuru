@@ -6,7 +6,7 @@ A small remote configuration library written for browser and node
 
 1. Clone this project `git clone git@github.com:SchneiderOr/configuru.git`
 2. Run `yarn install` or `npm install` to get the project's dependencies
-2. Run `yarn mock-server or `npm run mock-server` to get the project's mock db server up and runing
+2. Run `yarn mock-server` or `npm run mock-server` to get the project's mock db server up and runing
 2. In another terminal, run node example/node.js to see an actual example
 
 ## Scripts
