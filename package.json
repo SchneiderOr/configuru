@@ -5,12 +5,12 @@
 	"author": "Or Schneider",
 	"license": "MIT",
 	"scripts": {
+		"build": "webpack --env dev && webpack --env build",
 		"dev": "webpack --progress --colors --watch --env dev",
 		"fix": "eslint --fix lib/",
-		"lint": "eslint src test tools",
 		"flow": "flow check",
+		"lint": "eslint src test tools",
 		"mock-server": "json-server --watch mock.json",
-		"build": "webpack --env dev && webpack --env build",
 		"prepublish": "npm run build",
 		"test": "mocha --require babel-polyfill --require babel-register --colors ./test/*.spec.js",
 		"test:watch": "mocha --require babel-core/register --colors -w ./test/*.spec.js"
@@ -41,6 +41,7 @@
 		"flow-bin": "^0.61.0",
 		"json-server": "^0.12.1",
 		"mocha": "^4.0.1",
+		"parallel-webpack": "^2.3.0",
 		"prettier": "^1.9.2",
 		"prettier-eslint": "^8.3.1",
 		"webpack": "^3.10.0",

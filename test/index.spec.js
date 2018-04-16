@@ -1,24 +1,15 @@
-import Client from '../lib'
+// const Configuru = require('../dist/configuru.js-commonjs2')
+const Configuru = require('../dist/configuru.js-commonjs2')
 const expect = require('chai').expect;
 
-const client = new Client({ apiKey: 'orKey1234' });
-client.on('loaded',()=>console.log('xx'))
-client.on('fetching',()=>console.log('xxxxs'))
+// We need to test our library so that we we will know it works and prevent regression of
+// changes in the future. How do you do it?
+const client = new Configuru({ apiKey: 'orKey1234' });
+
+// On config load, we got a callback with the config
+client.on('loaded', config => {
+	console.log(config)
+})
+// console.log(client.get('key2'))
 client.on('fetching', () => console.log('fetching'))
-// describe('test', () => {
-// 	let client;
-// 	let config;
-// 	before(initMockServer)
-// 	beforeEach(() => {
-// 		client = new Client('orKey1234'); // mock key, mock server.
-// 		// console.log('Mock Client is started')
-// 		// client.on('loaded', data => config = data)
-// 	});
-
-// 	// it('Should return the value for the config key working', (done) => {
-// 	// 	console.log(config)
-// 	// 	done(config)
-// 	// })
-
-// })
 
