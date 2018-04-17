@@ -12,7 +12,7 @@ console.log('isLoaded:', client.isLoaded)
 // On config load, we got a callback with the config
 client.on('loaded', config => {
 	// Get the config when loaded event occours
-	console.log('initial config from server', JSON.stringify(config)) \
+	console.log('initial config from server', JSON.stringify(config))
 	// isLoaded set ti true
 	console.log('isLoaded:', client.isLoaded)
 	// Get a value by single key
