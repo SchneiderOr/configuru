@@ -8,9 +8,13 @@ const client = new Configuru({ apiKey: 'orKey1234' })
 // We can check if the config is loaded from the server by accessing .isLoaded
 console.log('isLoaded:', client.isLoaded)
 
+
 // On config load, we got a callback with the config
 client.on('loaded', config => {
-	console.log('initial config from server', JSON.stringify(config))
+	// Get the config when loaded event occours
+	console.log('initial config from server', JSON.stringify(config)) \
+	// isLoaded set ti true
+	console.log('isLoaded:', client.isLoaded)
 	// Get a value by single key
 	console.info('Get the value for key1', client.get('key1'))
 	// And default value also can be specified if key dosent exist or empty
