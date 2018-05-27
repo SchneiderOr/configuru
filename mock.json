@@ -4,9 +4,16 @@
 		"key3": true,
 		"key4": {
 			"nested": false
+		},
+		"what": {
+			"is": {
+				"the": {
+					"answer" : 42
+				}
+			}
 		}
 	},
-	"123": {
+	"demoUserKey222": {
 		"key1": true,
 		"key2": false,
 		"key3": false

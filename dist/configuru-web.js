@@ -5887,7 +5887,9 @@ var Configuru = function (_EventEmitter) {
 			this.emit('loaded', data);
 		}
 
-		// 6. The library should not block the execution of the app/service while getting the configuration from the server.
+		/**
+   * The library won't block the execution of the app/service while getting the configuration from the server.
+   */
 
 	}, {
 		key: 'init',
@@ -5925,10 +5927,17 @@ var Configuru = function (_EventEmitter) {
 
 			return init;
 		}()
+	}, {
+		key: 'refresh',
+		value: function refresh() {
+			this.init();
+		}
 
-		// 2. The library needs to expose a method that returns a single value based on a key.
-		// 7. The library should expose a way to get a default value. In case there is no locally cached configuration (e.g. first time ever, the app/service starts), and the customer code requests a value for a key before the response from the servers arrived.
-		// Handle get from cache here.
+		/**
+   * Get the desired key or path from the config.
+   * @param {*string | string[]} key - the key to retrive from config
+   * @param {*} defaultValue - a default value to set when there is no such key
+   */
 
 	}, {
 		key: 'get',
@@ -17187,17 +17196,15 @@ var _isomorphicFetch2 = _interopRequireDefault(_isomorphicFetch);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-// We can fetch thru by passing option to config
-var fetchThru = function () {
-	var _ref = (0, _asyncToGenerator3.default)( /*#__PURE__*/_regenerator2.default.mark(function _callee(url, _ref2) {
-		var onBeforeCache = _ref2.onBeforeCache;
+exports.default = function () {
+	var _ref = (0, _asyncToGenerator3.default)( /*#__PURE__*/_regenerator2.default.mark(function _callee(url, opts) {
 		var response, data;
 		return _regenerator2.default.wrap(function _callee$(_context) {
 			while (1) {
 				switch (_context.prev = _context.next) {
 					case 0:
 						_context.next = 2;
-						return (0, _isomorphicFetch2.default)(url);
+						return (0, _isomorphicFetch2.default)(url, opts);
 
 					case 2:
 						response = _context.sent;
@@ -17206,11 +17213,9 @@ var fetchThru = function () {
 
 					case 5:
 						data = _context.sent;
-
-						if (onBeforeCache) data = onBeforeCache(data);
 						return _context.abrupt('return', data);
 
-					case 8:
+					case 7:
 					case 'end':
 						return _context.stop();
 				}
@@ -17218,15 +17223,10 @@ var fetchThru = function () {
 		}, _callee, undefined);
 	}));
 
-	return function fetchThru(_x, _x2) {
+	return function (_x, _x2) {
 		return _ref.apply(this, arguments);
 	};
 }();
-
-exports.default = function (url) {
-	var opts = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
-	return fetchThru(url, opts);
-};
 
 module.exports = exports['default'];
 

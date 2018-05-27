@@ -1,35 +1,34 @@
-const Configuru = require('../dist/configuru-node')
+const Configuru = require('../dist/configuru-node');
 // We need to test our library so that we we will know it works and prevent regression of
 // changes in the future. How do you do it?
-const client = new Configuru({ apiKey: 'orKey1234' })
-
-// client.on('fetching', () => console.log('fetching'))
-
+const client = new Configuru({ apiKey: 'orKey1234' });
+console.log('Welcoem to configuru demo');
+console.log('We initilized the library alocating it to the client const');
+console.log('Some usful statics are client.config, client.isLoaded');
+console.log('------------------------------------------------------');
 // We can check if the config is loaded from the server by accessing .isLoaded
-console.log('isLoaded:', client.isLoaded)
-
+console.log('checking if the config is loaded:', client.isLoaded);
 
 // On config load, we got a callback with the config
 client.on('loaded', config => {
-	// Get the config when loaded event occours
-	console.log('initial config from server', JSON.stringify(config))
-	// isLoaded set ti true
-	console.log('isLoaded:', client.isLoaded)
+	console.log('checking if the config is loaded:', client.isLoaded);
+
+	console.log('initial config from server\n', config);
 	// Get a value by single key
-	console.info('Get the value for key1', client.get('key1'))
+	console.info('Get the value for key1', client.get('key1'));
 	// And default value also can be specified if key dosent exist or empty
-	console.info('Get the value for key12345 (that is not yet exist)', client.get('key2', false))
+	console.info(
+		'Get the value and prepare default value for key12345 (that is not yet exist)',
+		client.get('key2', false)
+	);
 	// Get a value by path
-	console.info('Get the value for the path key4.nested:', client.get(['key4', 'nested']))
-})
+	console.info('Get the value for the path key4.nested:', client.get(['key4', 'nested']));
+	// Get a value by path
+	console.info(
+		'Get the value for the path what.is.the.answer:',
+		client.get(['what', 'is', 'the', 'answer'])
+	);
+});
 
-client.on('error', console.error)
-
-// get is async so we need to wait for the initial before accessing it
-setTimeout(() => {
-	console.log(client.get('key1'))
-}, 3000)
-
-process.stdin.on("data", () => { })
-
-
+client.on('error', console.error);
+process.stdin.on('data', () => {});
