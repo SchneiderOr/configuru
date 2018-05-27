@@ -1,6 +1,6 @@
 # Configuru
 
-A small remote configuration library written for browser and node
+A small remote configuration library written for browser and node built to be isomorphic and declerative
 
 ## Getting started
 
@@ -13,5 +13,11 @@ A small remote configuration library written for browser and node
 
 * `yarn build` or `npm run build` - produces production version of your library for both node and web under the `dist` folder
 * `yarn dev` or `npm run dev` - produces development version of your library and runs a watcher
-* `yarn test` or `npm run test`- runs the tests
-* `yarn test:watch` or `npm run test:watch` - same as above but in a watch mode
+
+## Examples
+- To run the browser example:
+	1. run the API server using yarn mock-server using `yarn mock-server` or `npm run mock-server`
+	2. visit http://localhost:3000 and open up the browser console
+- To run the node example:
+	1. run the API server using yarn mock-server using `yarn mock-server` or `npm run mock-server`
+	2. run node ./example/node
